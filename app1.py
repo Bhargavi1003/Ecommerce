@@ -308,6 +308,7 @@ def sucess():
         'razorpay_payment_id' : payment_id,
         'razorpay_signature' : signature
     }
+    # jkdfjsdkjfjkdjksdfkv
     try:
         client.utility.verify_payment_signature(dict1)
         return render_template("contactresult.html",message = "Payment Sucessfull")
