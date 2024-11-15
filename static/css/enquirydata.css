@@ -1,0 +1,47 @@
+body{
+    background-color: gainsboro;
+}
+h1{
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+    background : linear-gradient(to right, palevioletred, white);
+}
+h1::after{
+    content: ":)";
+    color: white;
+}
+h1::first-letter{
+    font-size: 2.5rem;
+    font-family: cursive;
+    color: white;
+}
+.a{
+    /* background-color: rgb(202, 242, 202); */
+    margin-top : 20px;
+    border-radius: 10px;
+    padding : 10px;
+    text-align: center;
+    align-content: center;
+} 
+table{
+    background: linear-gradient(to bottom, palevioletred, white);
+    position: relative;
+    left : 25%;
+    margin-top:10px;
+    text-align: center;
+    align-content: center;
+    border: solid;
+    width : 50%;
+    font-family: cursive;
+    padding : 10px;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: gray;
+}
+.data{
+    font-family: cursive;
+    color: black;
+    text-align: left;
+    font-size: 15px;
+}

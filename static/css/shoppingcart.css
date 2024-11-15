@@ -1,0 +1,83 @@
+.A{
+    background-color: gray;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+a{
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    margin: 10px;
+    border-radius: 2px;
+    padding: 10px;
+    text-decoration: none;
+}
+.h1{
+    /* background-color: white; */
+    font-family: cursive;
+    font-weight: bold;
+    margin: 10px;
+    /* border-radius: 2px; */
+    padding: 10px;
+    color: white;
+}
+.b{
+    background-color: white;
+    margin-top: 30px;
+}
+table{
+    align-items: center;
+    text-align: center;
+    border-color: gray;
+    border-radius: 5px;
+    border-width: 7px;
+    color: black;
+    font-size: 1.5rem;
+    font-family: cursive;
+    padding: 10px;
+}
+th{
+    background: linear-gradient(to bottom, palevioletred,gray);
+    color: white;
+}
+.payment{
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: cursive;
+    box-shadow: 10px 10px 5px gray;
+}
+p{
+    font-weight: bold;
+    text-shadow: 5px 5px 5px palevioletred;
+}
+.button{
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+button{
+    border: solid;
+    border-color: gray;
+    background: linear-gradient(to right, palevioletred, gray);
+    padding : 10px;
+    color : white;
+    font-family:cursive;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: white;
+}

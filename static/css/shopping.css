@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: cursive;
+}
+.header {
+    /* background-color: gray; */
+    background: linear-gradient(to right, palevioletred,gray);
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header h1, .header p {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 14px;
+}
+
+.nav-right {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.nav-right a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 2px;
+    padding: 10px;
+}
+.nav-right form {
+    margin: 20px;
+    /* margin-left: 10px; */
+}
+.nav-right form input{
+    background-color: white;
+    width: 65px;
+    border: none;
+    border-radius: 2px;
+    height: 3.5vh;
+    font-weight: bold;
+}
+
+
+.categories{
+    background-color: gainsboro;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.categories a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-family: cursive;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.categories a:hover{
+    background-color: palevioletred;
+}
+.roses{
+    background-color: gray;
+    justify-content: space-between;
+    align-items: left;
+    display:flex;
+    flex-direction: row;
+    margin: 10px;
+    border: 5px solid palevioletred;
+    box-shadow: 5px 4px 5px black;
+}
+.roses .rose-1{
+    background-color: gainsboro;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: cursive;
+    /* font-weight: bold; */
+    margin: 5px;
+    padding: 5px;
+    border: 5px solid white;
+}
+.rose-1 img{
+    width: 200px;
+    height: 200px;
+}
+
+h2::after{
+    content: ':)';
+    color: palevioletred;
+}
+h2::first-letter{
+    color: palevioletred;
+    font-size: 2rem;
+}
+
+input{
+    background-color: white;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 5px;
+    box-shadow: 3px 3px 3px gray;
+}
+input:hover{
+    background-color: palevioletred;
+}

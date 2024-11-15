@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="login.css"> -->
+     <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/logo.jpeg')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/signup.css')}}">
+</head>
+<body>
+    <div class="navbar">
+        <div><a href="{{'home'}}">Home</a></div>
+        <div><a href="{{'login'}}" target="_self">Login</a></div>
+        <div class="signup"><a href="{{'signup'}}">Sign Up</a></div>
+    </div>
+    <div class="a">
+        <h1>Welcome to FlowersCart</h1><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Please login to dive into our flowerscart</p>
+        <form action="{{'verifylogin'}}" method="POST">
+            <div class="b">
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="c">
+                <label for="mobile">Mobile: </label>
+                <input type="text" id="mobile" name="mobile">
+            </div>
+            <div class="h">
+                <input type="submit" value="Login">
+            </div>
+            <p class="p">Don't you have an account have an account ? <a href="{{'signup'}}">signup</a></p>
+        </form>
+    </div>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/logo.jpeg')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/signup1.css')}}">
+</head>
+<body>
+    <div class="navbar">
+        <div><a href="{{'home'}}">Home</a></div>
+        <div><a href="{{'login'}}" target="_self">Login</a></div>
+        <div class="signup"><a href="{{'signup'}}">Sign Up</a></div>
+    </div>
+    <div class="a">
+        <h1>Welcome to FlowersCart</h1><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Please register to dive into our flowerscart</p>
+        <form action="{{'verifyotp'}}" method="POST">
+            <div class="b">
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname" value="{{fname}}">
+            </div>
+            <div class="c">
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="lname" value="{{lname}}">
+            </div>
+            <div class="d">
+                <label for="mobile">Mobile: </label>
+                <input type="text" id="mobile" name="mobile" value="{{mobile}}">
+            </div>
+            <div class="e">
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" required value="{{email}}">
+            </div>
+            <div class="f">
+                <label for="email">Enter OTP: </label>
+                <input type="text" id="otp" name="otp" required>
+            </div>
+            <div class="h">
+                <input type="submit" value="Register">
+            </div>
+            <p class="p">Already have an account ? <a href="{{'login'}}">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/shopping.css')}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome {{name}}</h1>
+        <p>{{mail}}</p>
+
+        <div class="nav-right">
+            <a href="{{'home'}}">Home</a>
+            <form action="{{'cart'}}" method="POST">
+                <input type="text" name="mail" value="{{mail}}" hidden>
+                <input type="submit" value="Cart">
+            </form>
+        </div>
+    </div>
+    <div class="categories">
+        <a href="#roses">Roses</a>
+        <a href="#tulips">Tulips</a>
+        <a href="#bluebelly">Bluebelly</a>
+        <a href="#artichoke">Artichoke</a>
+        <a href="#marigold">Marigold</a>
+        <a href="#hibiscus">Hibiscus</a>
+        <a href="#sunflower">Sunflower</a>
+        <a href="#lotus">Lotus</a>
+        <a href="#lilly">Lilly</a>
+    </div>
+    <!-- item-1-->
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Roses</h2>
+    <br>
+    <div class="roses" id="roses">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/r1.jpg')}}" alt="rose-1">
+            <div>
+                <p>Name: <b>Checkmate</b><br>price: <b>30/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="101,Checkmate,30,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="101,Checkmate,{{mail}},30,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/r2.jpg')}}" alt="rose-2">
+            <div>
+                <p>Name: <b>Pinky Flyoid</b><br>price: <b>20/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="102,Pinky Flyoid,20,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="102,Pinky Flyoid,{{mail}},20,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/r3.jpg')}}" alt="rose-3">
+            <div>
+                <p>Name: <b>Cezzane</b><br>price: <b>35/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="103,Cezzane,35,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="103,Cezzane,{{mail}},35,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/r4.jpg')}}" alt="rose-4">
+            <div>
+                <p>Name: <b>Follies</b><br>price: <b>40/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="104,Follies,40,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="104,Follies,{{mail}},40,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/r5.jpg')}}" alt="rose-5">
+            <div>
+                <p>Name: <b>Vendela</b><br>price: <b>50/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="105,Vendela,50,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="105,Vendela,{{mail}},50,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- item-2-->
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Tulips</h2>
+    <br>
+    <div class="roses" id="tulips">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/t1.jpg')}}" alt="tulip-1">
+            <div>
+                <p>Name: <b>Darwin</b><br>price: <b>100/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="201,Darwin,100,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="201,Darwin,{{mail}},100,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/t2.jpeg')}}" alt="tulip-2">
+            <div>
+                <p>Name: <b>Parror</b><br>price: <b>200/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="202,Parror,200,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="202,Parror,{{mail}},200,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/t3.jpeg')}}" alt="tulip-3">
+            <div>
+                <p>Name: <b>Fosteriana</b><br>price: <b>350/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="203,Fosteriana,350,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="203,Fosteriana,{{mail}},350,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/t4.jpg')}}" alt="tulip-4">
+            <div>
+                <p>Name: <b>Single Late</b><br>price: <b>250/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="204,Single Late,250,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="204,Single Late,{{mail}},250,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/t5.jpg')}}" alt="tulip-5">
+            <div>
+                <p>Name: <b>Kaufmanniana</b><br>price: <b>150/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="205,Kaufmanniana,150,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="205,Kaufmanniana,{{mail}},150,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- item-3-->
+
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Bluebelly</h2>
+    <br>
+    <div class="roses" id="bluebelly">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/b1.jpg')}}" alt="bluebelly-1">
+            <div>
+                <p>Name: <b>English</b><br>price: <b>160/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="301,English,160,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="301,English,{{mail}},160,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/b2.jpg')}}" alt="bluebelly-2">
+            <div>
+                <p>Name: <b>Spanish</b><br>price: <b>100/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="302,Spanish,100,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="302,Spanish,{{mail}},100,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/b3.jpeg')}}" alt="bluebelly-3">
+            <div>
+                <p>Name: <b>Virginia</b><br>price: <b>200/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="303,Virginia,200,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="303,Virginia,{{mail}},200,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/b4.jpeg')}}" alt="bluebelly-4">
+            <div>
+                <p>Name: <b>Scottish</b><br>price: <b>260/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="304,Scottish,260,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="304,Scottish,{{mail}},260,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/b5.jpeg')}}" alt="bluebelly-5">
+            <div>
+                <p>Name: <b>Woodland</b><br>price: <b>350/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="305,Woodland,350,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="305,Woodland,{{mail}},350,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>>
+            </div>
+        </div>
+    </div>
+
+
+<!-- item-4-->
+
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Artichoke</h2>
+    <br>
+    <div class="roses" id="artichoke">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/a1.jpeg')}}" alt="artichoke-1">
+            <div>
+                <p>Name: <b>Globe</b><br>price: <b>80/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="401,Globe,80,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="401,Globe,{{mail}},80,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/a2.jpg')}}" alt="artichoke-2">
+            <div>
+                <p>Name: <b>Voiletto</b><br>price: <b>100/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="402,Voiletto,100,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="402,Voiletto,{{mail}},100,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/a3.jpeg')}}" alt="artichoke-3">
+            <div>
+                <p>Name: <b>Romanesco</b><br>price: <b>135/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="403,Romanesco,135,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="403,Romanesco,{{mail}},135,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/a4.jpeg')}}" alt="artichoke-4">
+            <div>
+                <p>Name: <b>Siena</b><br>price: <b>140/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="404,Siena,140,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="404,Siena,{{mail}},140,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/a5.jpeg')}}" alt="artichoke-5">
+            <div>
+                <p>Name: <b>Imperial</b><br>price: <b>150/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="405,Imperial,150,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="405,Imperial,{{mail}},150,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- item-5-->
+
+
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Marigold</h2>
+    <br>
+    <div class="roses" id="marigold">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/m1.jpeg')}}" alt="marigold-1">
+            <div>
+                <p>Name: <b>Erecta</b><br>price: <b>50/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="501,Erecta,50,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="501,Erecta,{{mail}},50,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/m2.jpg')}}" alt="marigold-2">
+            <div>
+                <p>Name: <b>Patula</b><br>price: <b>70/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="502,Patula,70,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="502,Patula,{{mail}},70,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/m3.jpg')}}" alt="marigold-3">
+            <div>
+                <p>Name: <b>Tenuifolia</b><br>price: <b>35/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="503,Tenuifolia,35,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="503,Tenuifolia,{{mail}},35,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/m4.jpeg')}}" alt="marigold-4">
+            <div>
+                <p>Name: <b>Crackerjack</b><br>price: <b>90/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="504,Crackerjack,90,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="504,Crackerjack,{{mail}},90,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/m5.jpeg')}}" alt="marigold-5">
+            <div>
+                <p>Name: <b>Inca</b><br>price: <b>100/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="505,Inca,100,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="505,Inca,{{mail}},100,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- item-6-->
+
+
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Sunflowers</h2>
+    <br>
+    <div class="roses" id="sunflower">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/s1.jpeg')}}" alt="sunflower-1">
+            <div>
+                <p>Name: <b>Common</b><br>price: <b>200/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="601,Common,200,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="601,Common,{{mail}},200,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/s2.jpeg')}}" alt="sunflower-2">
+            <div>
+                <p>Name: <b>Maximilian</b><br>price: <b>270/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="602,Maximilian,270,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="602,Maximilian,{{mail}},270,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/s3.jpg')}}" alt="sunflower-3">
+            <div>
+                <p>Name: <b>Mammoth</b><br>price: <b>350/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="603,Mammoth,350,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="603,Mammoth,{{mail}},350,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/s4.jpg')}}" alt="sunflower-4">
+            <div>
+                <p>Name: <b>Dwarf</b><br>price: <b>400/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="604,Dwarf,400,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="604,Dwarf,{{mail}},400,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/s5.jpeg')}}" alt="sunflower-5">
+            <div>
+                <p>Name: <b>Autumn</b><br>price: <b>370/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="605,Autumn,370,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="605,Autumn,{{mail}},370,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- item-7-->
+
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Hibiscus</h2>
+    <br>
+    <div class="roses" id="hibiscus">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/h1.jpg')}}" alt="hibiscus-1">
+            <div>
+                <p>Name: <b>Red</b><br>price: <b>60/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="701,Red,60,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="701,Red,{{mail}},60,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/h2.jpeg')}}" alt="hibiscus-2">
+            <div>
+                <p>Name: <b>Chinese</b><br>price: <b>90/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="702,Chinese,90,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="702,Chinese,{{mail}},90,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/h3.jpeg')}}" alt="hibiscus-3">
+            <div>
+                <p>Name: <b>Sharon</b><br>price: <b>105/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="703,Sharon,105,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="703,Sharon,{{mail}},105,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/h4.jpeg')}}" alt="hibiscus-4">
+            <div>
+                <p>Name: <b>Hawaiian</b><br>price: <b>190/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="704,Hawaiian,190,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="704,Hawaiian,{{mail}},190,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/h5.jpg')}}" alt="hibiscus-5">
+            <div>
+                <p>Name: <b>Roselle</b><br>price: <b>150/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="705,Roselle,150,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="705,Roselle,{{mail}},150,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- item-8-->
+
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Lotus</h2>
+    <br>
+    <div class="roses" id="lotus">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/l1.jpg')}}" alt="lotus-1">
+            <div>
+                <p>Name: <b>Scared</b><br>price: <b>300/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="801,Scared,300,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="801,Scared,{{mail}},300,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/l2.jpg')}}" alt="lotus-2">
+            <div>
+                <p>Name: <b>Bluey</b><br>price: <b>420/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="802,Bluey,420,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="802,Bluey,{{mail}},420,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/l3.jpeg')}}" alt="lotus-3">
+            <div>
+                <p>Name: <b>Pink</b><br>price: <b>350/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="803,Pink,350,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="803,Pink,{{mail}},350,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/l4.jpeg')}}" alt="lotus-4">
+            <div>
+                <p>Name: <b>American</b><br>price: <b>540/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="804,American,540,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="804,American,{{mail}},540,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/l5.jpg')}}" alt="lotus-5">
+            <div>
+                <p>Name: <b>White</b><br>price: <b>650/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="805,White,650,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="805,White,{{mail}},650,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- item-9-->
+
+
+    <br>
+    <h2 align="center" style="color: black; font-family: cursive;">Lilly</h2>
+    <br>
+    <div class="roses" id="lilly">
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/li1.jpeg')}}" alt="lilly-1">
+            <div>
+                <p>Name: <b>Asiatic</b><br>price: <b>100/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="901,Asiatic,100,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="901,Asiatic,{{mail}},100,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/li2.jpg')}}" alt="lilly-2">
+            <div>
+                <p>Name: <b>Easter</b><br>price: <b>120/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="902,Easter,120,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="902,Easter,{{mail}},120,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/li3.jpg')}}" alt="lilly-3">
+            <div>
+                <p>Name: <b>Stargazer</b><br>price: <b>135/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="903,Stargazer,135,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="903,Stargazer,{{mail}},135,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/li4.jpg')}}" alt="lilly-4">
+            <div>
+                <p>Name: <b>Tiger</b><br>price: <b>140/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="904,Tiger,140,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="904,Tiger,{{mail}},140,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+        <div class="rose-1">
+            <img src="{{url_for('static',filename='images/li5.jpg')}}" alt="lilly-5">
+            <div>
+                <p>Name: <b>Calla</b><br>price: <b>150/-</b></p>
+            </div>
+            <div>
+                <form action="{{'storecart'}}" method="POST">
+                    <input type="text" name="cart" value="905,Calla,150,{{name}},{{mail}}" hidden>
+                    <input type="submit" value="Add Cart">
+                </form>
+                <form action="{{'storecart1'}}" method="POST">
+                    <input type="text" name="cart" value="905,Calla,{{mail}},150,1" hidden>
+                    <input type="submit" value="Buy Now">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

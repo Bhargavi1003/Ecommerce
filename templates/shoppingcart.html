@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amount</title>
+    <!-- <link rel="stylesheet" href="shoppingcart.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/shoppingcart.css')}}">
+</head>
+<body>
+    <div class="A">
+        <div class="h1">
+            <h1>Welcome {{email}}</h1>
+        </div>
+        <div>
+            <a href="{{'home'}}">Home</a>
+            <a href="{{'shopping'}}">Shopping</a>
+        </div>
+    </div>
+        <div class="b">
+            <table border="2" align="center" class="c" cellspacing="10px" cellpadding="10px">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Quantity</th>
+                </tr>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="payment">
+            <h1>Total Payment : {{total}} </h1>
+            <p>pay now by clicking below payment button</p>
+        </div>
+        <div class="button">
+            <button id="rzp-button1">PAY NOW</button>
+            <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+                <script>
+                    var options = {
+                        "key" : "rzp_test_7aThPyJimSbFfi",
+                        "amount" : "{{ order.amount }}",
+                        "currency" : "INR",
+                        "name" : "codegnan",
+                        "description" : "Sample E commerce Transaction",
+                        "image" : "https://example.com/your_logo",
+                        "order_id" : "{{order.id}}",
+                        "handler" : function (response){
+                            var form = document.createElement('form');
+                            form.action = "/sucess";
+                            form.method = "POST";
+
+                            form.innerHTML = `
+                                <input type="hidden" name="razorpay_payment_id" value = "${response.razorpay_payment_id}">
+                                <input type="hidden" name="razorpay_order_id" value = "${response.razorpay_order_id}">
+                                <input type="hidden" name="razorpay_signature" value = "${response.razorpay_signature}">
+                                <input type = "hidden" name = "total_price" value = {{price}}
+                            `;
+                            document.body.appendChild(form);
+                            form.submit();
+                        },
+                        "prefill" : {
+                            "name" : "Test [E commerce]",
+                            "email" : "session.get('user')",
+                            "contact" : "7981766935"
+                        },
+                        "theme" : {
+                            "color" : "#3399cc"
+                        }
+                    };
+                    var rzp1 = new Razorpay(options);
+                    document.getElementById('rzp-button1').onclick = function(e){
+                        rzp1.open();
+                        e.preventDefault();
+                    }
+                </script>
+        </div>
+</body>
+</html>

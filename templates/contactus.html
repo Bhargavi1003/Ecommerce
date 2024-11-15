@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/logo.jpeg')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/contactus.css')}}">
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>please fill below form for any queries</p><br>
+    <div class="form">
+        <form action="{{'collectcontactus'}}" method="POST">
+            <table cellspacing="5px" cellpadding="5px" align="center" width="300px">
+                <tr>
+                    <th colspan="2">Contact Form</th>
+                </tr>
+                <tr>
+                    <td><label for="name">Name: </label></td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile: </label></td>
+                    <td><input type="text" id="mobile" name="mobile"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email: </label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

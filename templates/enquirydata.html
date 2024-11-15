@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Data</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/logo.jpeg')}}">
+    <!-- <link rel="stylesheet" href="enquirydata.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/enquirydata.css')}}">
+</head>
+<body>
+    <h1>Enquiry Customers List</h1>
+    <div class="a">
+        <table width="50%" cellspacing="2px" border="1px">
+            <tr style="background-color: white;">
+                <th>Fullname</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+            {% for i in data  %}
+            <tr class="data">
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div>
+        
+    </div>
+</body>
+</html>

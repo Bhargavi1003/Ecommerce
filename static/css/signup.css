@@ -1,0 +1,119 @@
+body{
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 20px;
+}
+.a{
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
+    margin: 300px;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 10px;
+    font-family: cursive;
+    margin-top: 100px;
+    /* width: 700px;
+    max-width: 100%; */
+}
+.a div{
+    margin: 15px;
+    color: black;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;   
+}
+.p{
+    text-align: center;
+    text-decoration: none;
+}
+        /* input{
+            border-radius: 5px;
+            height: 25px;
+            border-color: gainsboro;
+        } */
+.h input[type="submit"] {
+    background-color: palevioletred;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 500px;
+}
+.h input[type="submit"]:hover {
+    background-color: #b55f97;
+}
+#fname{
+    height: 25px;
+    width: 40%;
+}
+#lname{
+    height: 25px;
+    width: 40%;
+}
+#mobile{
+    height: 25px;
+    width: 40%;
+}
+#email{
+    height: 25px;
+    width: 40%;
+}
+#password{
+    height: 25px;
+    width: 40%;
+}
+#confirmpassword{
+    height: 25px;
+    width: 40%;
+}
+h1,p{
+    text-align: center;
+}
+h1::first-letter{
+    font-size: 3rem;
+    font-weight: 200;
+    color: palevioletred;
+}
+h1::after{
+    content: ':)';
+    color: palevioletred;
+}
+a{
+    text-decoration: none;
+    color:palevioletred;
+}
+.navbar{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 120px 120px auto;
+    top : 20px;
+    left : 20px;
+    height: 60px;
+    margin: 10px;
+    margin-bottom: 70px;
+}
+.navbar div{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin: 20px;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to right, pink,palevioletred); */
+    /* transition: background-color 0.1s ease; */
+    font-family: cursive;
+}
+.navbar div:hover{
+    background-color: gainsboro;
+}

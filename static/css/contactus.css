@@ -1,0 +1,39 @@
+body{
+    background-image: url('/static/images/bg.jpg');
+    
+}
+h1{
+    text-align: center;
+    font-family: cursive;
+    background-color: black;
+    color: white;
+}
+h1::after{
+    content: ":)";
+}
+h1::first-letter{
+    font-size: 2.5rem;
+}
+p{
+    font-weight: bold;
+    font-family: cursive;
+    color: black;
+    text-align: center;
+    text-shadow:5px 5px 10px palevioletred;
+    font-size: medium;
+    font-size: 1.5rem;
+}
+table{
+    background: linear-gradient(to bottom, palevioletred,white);
+    margin-left: auto;
+    margin-right: auto;
+    color:black;
+    font-weight: bold;
+    font-family: cursive;
+}
+input{
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-family: cursive;
+}
