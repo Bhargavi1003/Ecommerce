@@ -1,215 +1,265 @@
 .navbar{
-    background: linear-gradient(to right, black, black);
-    height: 40px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    /* box-shadow: 5px 5px 10px palevioletred;
-    background: linear-gradient(to right, pink,plum); */
-    
+  background: linear-gradient(to right, black, black);
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  /* box-shadow: 5px 5px 10px palevioletred;
+  background: linear-gradient(to right, pink,plum); */
+  
 }
 .navbar div{
-    background-color: white;
-    color: black;
-    margin: 25px;
-    border-radius: 4px;
-    padding: 5px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    /* background: linear-gradient(to right, pink,palevioletred); */
-    transition: background-color 0.1s ease;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: white;
+  color: black;
+  margin: 25px;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to right, pink,palevioletred); */
+  transition: background-color 0.1s ease;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .navbar a{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 .navbar div:hover{
-    background: linear-gradient(to right,pink,palevioletred);
+  background: linear-gradient(to right,pink,palevioletred);
 }
 .myhead{
-    text-align: center;
-    color: black;
-    font-family: cursive;
-    /* border: 3px solid pink; */
-    box-shadow: 5px 5px 10px palevioletred;
-    background: radial-gradient(circle, white, lightslategray);
+  text-align: center;
+  color: black;
+  font-family: cursive;
+  /* border: 3px solid pink; */
+  box-shadow: 5px 5px 10px palevioletred;
+  background: radial-gradient(circle, white, lightslategray);
 }
 h1::first-letter{
-    font-size: 4rem;
-    font-weight: 200;
-    color: palevioletred;
+  font-size: 4rem;
+  font-weight: 200;
+  color: palevioletred;
 }
 h1::after{
-    content: ":)";
-    color: palevioletred;
+  content: ":)";
+  color: palevioletred;
 }
 h1::selection{
-    background-color: chocolate;
+  background-color: chocolate;
 }
 p{
-    font-weight: bold;
-    font-family: cursive;
-    color: palevioletred;
-    text-align: center;
-    text-shadow:5px 5px 10px gray;
-    font-size: medium;
-    font-size: 1rem;
+  font-weight: bold;
+  font-family: cursive;
+  color: palevioletred;
+  text-align: center;
+  text-shadow:5px 5px 10px gray;
+  font-size: medium;
+  font-size: 1rem;
+}
+/* .para
+{
+ text-transform: uppercase;
+background-image: linear-gradient(
+  -225deg,
+  #231557 0%,
+  #44107a 29%,
+  #ff1361 67%,
+  #fff800 100%
+);
+background-size: auto auto;
+background-clip: border-box;
+background-size: 200% auto;
+color: #fff;
+background-clip: text;
+text-fill-color: transparent;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: textclip 2s linear infinite;
+    font-size: 15px;
+}
+
+@keyframes textclip {
+to {
+  background-position: 200% center;
+}
+} */
+.para{
+animation: colorChange 3s infinite;
+  text-align: center;
+}
+
+/* Keyframes for color change */
+@keyframes colorChange {
+  0% {
+      color: palevioletred; /* OrangeRed */
+  }
+  25% {
+      color: gray; /* LimeGreen */
+  }
+  50% {
+      color: black /* DodgerBlue */
+  }
+  75% {
+      color: pink; /* DeepPink */
+  }
+  100% {
+      color: lightcoral; /* OrangeRed */
+  }
 }
 .parentgrid{
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    background-color: lightcoral;
-    margin: 10px;
-    padding: 10px;
-    border: 5px solid lightslategray;
-    border-top: 5px solid black;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, pink, lightslategray);
-    /* justify-items: center; */
-    /* gap: 15px; */
-    /* place-items: center; */
-    margin-top : 10px;
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  background-color: lightcoral;
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid lightslategray;
+  border-top: 5px solid black;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, pink, lightslategray);
+  /* justify-items: center; */
+  /* gap: 15px; */
+  /* place-items: center; */
+  margin-top : 10px;
 }
 .parentgrid div{
-    background : linear-gradient(to right, white,white);
-    margin: 10px;
-    padding: 5px;
-    border: 2px solid black;
-    border-top: 2px solid lightslategray;
-    border-bottom: 2px solid lightslategray;
-    /* border-radius: 50%; */
-    box-shadow: 5px 5px 10px whitesmoke;
-    /* box-shadow:inset 5px 5px 10px lightgreen; */
-    align-items: center;
-    justify-content: center;
-    place-items: center;
+  background : linear-gradient(to right, white,white);
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid black;
+  border-top: 2px solid lightslategray;
+  border-bottom: 2px solid lightslategray;
+  /* border-radius: 50%; */
+  box-shadow: 5px 5px 10px whitesmoke;
+  /* box-shadow:inset 5px 5px 10px lightgreen; */
+  align-items: center;
+  justify-content: center;
+  place-items: center;
 }
 .parentgrid p{
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 .parentgrid div p{
-    padding: 5px;
+  padding: 5px;
 }
 
 .container{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    padding-left: 10px;
-    justify-content: left;
-    opacity: 0;
-    animation: fadeIn 1s forwards ease;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  justify-content: left;
+  opacity: 0;
+  animation: fadeIn 1s forwards ease;
 }
 .photo{
-    width: 30%;
-    /* border: 2px solid black; */
-    margin-right: 10px;
-    margin-left: 10px;
-    transform: translateX(-100%);
-    animation: slideInLeft 1s forwards ease 0.2s;
+  width: 30%;
+  /* border: 2px solid black; */
+  margin-right: 10px;
+  margin-left: 10px;
+  transform: translateX(-100%);
+  animation: slideInLeft 1s forwards ease 0.2s;
 }
 .photo img{
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 50vh;
 }
 .content{
-    width: 70%;
-    padding-right: 30px;
-    margin-top:2px;
-    /* border: 2px solid black; */
-    transform: translateX(100%);
-    animation: slideInRight 1s forwards ease 0.2s;
+  width: 70%;
+  padding-right: 30px;
+  margin-top:2px;
+  /* border: 2px solid black; */
+  transform: translateX(100%);
+  animation: slideInRight 1s forwards ease 0.2s;
 }
 @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  
-  /* Slide-in from left for image container */
-  @keyframes slideInLeft {
-    to {
-      transform: translateX(0);
-    }
+}
+
+/* Slide-in from left for image container */
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
   }
-  
-  /* Slide-in from right for content */
-  @keyframes slideInRight {
-    to {
-      transform: translateX(0);
-    }
+}
+
+/* Slide-in from right for content */
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
   }
+}
 
 .container1{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    padding-left: 10px;
-    justify-content: right;
-    opacity: 0;
-    animation: fadeIn 1s forwards ease;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  justify-content: right;
+  opacity: 0;
+  animation: fadeIn 1s forwards ease;
 }
 .photo1{
-    width: 30%;
-    /* border: 2px solid black; */
-    margin-right: 10px;
-    margin-left: 10px;
-    transform: translateX(100%); /* Start off-screen to the right */
-    animation: slideInRight 1s forwards ease 0.5s;
+  width: 30%;
+  /* border: 2px solid black; */
+  margin-right: 10px;
+  margin-left: 10px;
+  transform: translateX(100%); /* Start off-screen to the right */
+  animation: slideInRight 1s forwards ease 0.5s;
 }
 .photo1 img{
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 50vh;
 }
 .content1{
-    width: 70%;
-    padding-right: 30px;
-    margin-top:2px;
-    /* border: 2px solid black; */
-    transform: translateX(-100%);
-    animation: slideInLeft 1s forwards ease 0.5s;
+  width: 70%;
+  padding-right: 30px;
+  margin-top:2px;
+  /* border: 2px solid black; */
+  transform: translateX(-100%);
+  animation: slideInLeft 1s forwards ease 0.5s;
 }
 @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  
-  /* Slide-in from left for content */
-  @keyframes slideInLeft {
-    to {
-      transform: translateX(0);
-    }
+}
+
+/* Slide-in from left for content */
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
   }
-  
-  /* Slide-in from right for image container */
-  @keyframes slideInRight {
-    to {
-      transform: translateX(0);
-    }
+}
+
+/* Slide-in from right for image container */
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
   }
+}
 .content p{
-    font-weight: bold;
-    font-family: cursive;
-    color: black;
-    text-align: center;
-    text-shadow:5px 5px 10px palevioletred;
-    font-size: medium;
-    font-size: 1rem;
+  font-weight: bold;
+  font-family: cursive;
+  color: black;
+  text-align: center;
+  text-shadow:5px 5px 10px palevioletred;
+  font-size: medium;
+  font-size: 1rem;
 }
 .content1 p{
-    font-weight: bold;
-    font-family: cursive;
-    color: palevioletred;
-    text-align: center;
-    text-shadow:5px 5px 10px gray;
-    font-size: medium;
-    font-size: 1rem;
+  font-weight: bold;
+  font-family: cursive;
+  color: palevioletred;
+  text-align: center;
+  text-shadow:5px 5px 10px gray;
+  font-size: medium;
+  font-size: 1rem;
 }

@@ -192,9 +192,12 @@ def verifylogin():
         return render_template("contactresult.html",message="Data can not be sent to server")
     
 
-@app.route("/shopping")
+@app.route("/shopping", methods=["POST","GET"])
 def shopping():
-    return render_template("shopping.html")
+    if request.method == "POST":
+        email = request.form['mail']
+        fname = request.form['fullname']
+        return render_template("shopping.html",mail = email,name = fname )
 
 
 @app.route("/storecart",methods=["POST","GET"])
@@ -248,6 +251,7 @@ def storecart():
 def cart():
     if request.method == "POST":
         email = request.form['mail']
+        fname = request.form['fullname']
         conn = pymysql.connect(**db_config)
         print("connect")
         cursor = conn.cursor()
@@ -277,8 +281,59 @@ def cart():
             'currency' : 'INR',
             'payment_capture' : '1'
         })
-        return render_template("shoppingcart.html",data=rows,total=total_price,order = order,email=email)
+        return render_template("shoppingcart.html",data=rows,total=total_price,order = order,email=email,name = fname)
     
+@app.route("/deleteitem", methods=["POST","GET"])
+def deleteitem():
+    if request.method == "POST":
+        mail = request.form["email"]
+        itemname = request.form['item']
+        try:
+            conn = pymysql.connect(**db_config)
+            cursor = conn.cursor()
+            q = "DELETE FROM CART WHERE EMAIL=(%s) AND PNAME = (%s)"
+            cursor.execute(q,(mail,itemname))
+            x = cursor.fetchall()
+            print(x)
+            conn.commit()
+        except:
+            return render_template("contactresult.html",message = "error occured while deleting data")
+        else:
+            if request.method == "POST":
+                email = request.form['email']
+                conn = pymysql.connect(**db_config)
+                print("connect")
+                cursor = conn.cursor()
+                print("cursor")
+                q = "SELECT * FROM CART WHERE EMAIL = %s"
+                print("query")
+                cursor.execute(q,(email))
+                print("execute")
+                rows = cursor.fetchall()
+                print("fetch")
+                print(rows)
+                prices = []
+                quantities= []
+                for i in rows:
+                    prices.append(i[3])
+                    quantities.append(i[4])
+                print(prices)
+                print(quantities)
+                total_price = 0
+                for i in range(len(prices)):
+                    price = int(prices[i])
+                    quantity = int(quantities[i])
+                    total_price = total_price + (price*quantity)
+                total_price = total_price
+                order = client.order.create({
+                    'amount' : total_price,
+                    'currency' : 'INR',
+                    'payment_capture' : '1'
+                })
+                return render_template("shoppingcart.html",data=rows,total=total_price,order = order,email=email)
+                # return render_template("shoppingcart.html",email=mail,data=x)
+            else:
+                return "Method is not Post"
 @app.route("/storecart1",methods=["POST","GET"])
 def storecart1():
     if request.method == "POST":
@@ -302,6 +357,7 @@ def sucess():
     payment_id = request.form.get('razorpay_payment_id')
     order_id = request.form.get('razorpay_order_id')
     signature = request.form.get('razorpay_signature')
+    email = request.form.get('e-maill')
     total_price = request.form.get('total_price')
     dict1 = {
         'razorpay_order_id' : order_id,
@@ -311,14 +367,14 @@ def sucess():
     # jkdfjsdkjfjkdjksdfkv
     try:
         client.utility.verify_payment_signature(dict1)
+        conn = pymysql.connect(**db_config)
+        cursor = conn.cursor()
+        q = "DELETE FROM CART WHERE EMAIL = %s"
+        cursor.execute(q, (email,))
+        conn.commit()
         return render_template("contactresult.html",message = "Payment Sucessfull")
     except razorpay.errors.SignatureVerificationError:
         return render_template("contactresult.html",message="Payment Un sucessfull")
-    
-# @app.route("/shoppingcart")
-# def shoppingcart():
-#     return render_template("shoppingcart.html")
-
 
 if __name__ == "__main__":
     app.run(port=5001)

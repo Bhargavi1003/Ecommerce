@@ -14,8 +14,13 @@
         </div>
         <div>
             <a href="{{'home'}}">Home</a>
-            <a href="{{'shopping'}}">Shopping</a>
+            <form action="{{'shopping'}}" method="POST" style="display: inline;">
+                <input type="hidden" name="mail" value="{{email}}">
+                <input type="hidden" name="fullname" value="{{name}}">
+                <button type="submit" id="buttons">Shopping</button>
+            </form>
         </div>
+        
     </div>
         <div class="b">
             <table border="2" align="center" class="c" cellspacing="10px" cellpadding="10px">
@@ -23,14 +28,23 @@
                     <th>Product Name</th>
                     <th>Product Price</th>
                     <th>Quantity</th>
+                    <th>IN/OUT</th>
                 </tr>
                 {% for row in data %}
                 <tr>
                     <td>{{ row[1] }}</td>
                     <td>{{ row[3] }}</td>
                     <td>{{ row[4] }}</td>
+                    <td class="deleteitem">
+                        <form action="/deleteitem" method="POST">
+                            <input type="text" name = "email" value = "{{email}}" hidden>
+                            <input type="text" name = "item" value = "{{row[1]}}" hidden>
+                            <input class="abc" type="submit" value = "REMOVE" id="deleteitem">
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
+
             </table>
         </div>
         <div class="payment">
@@ -58,7 +72,8 @@
                                 <input type="hidden" name="razorpay_payment_id" value = "${response.razorpay_payment_id}">
                                 <input type="hidden" name="razorpay_order_id" value = "${response.razorpay_order_id}">
                                 <input type="hidden" name="razorpay_signature" value = "${response.razorpay_signature}">
-                                <input type = "hidden" name = "total_price" value = {{price}}
+                                <input type = "hidden" name = "total_price" value = {{price}}>
+                                <input type= "hidden" name = "e-mail" value = {{email}}>
                             `;
                             document.body.appendChild(form);
                             form.submit();

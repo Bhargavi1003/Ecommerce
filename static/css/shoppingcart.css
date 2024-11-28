@@ -15,7 +15,32 @@ a{
     border-radius: 2px;
     padding: 10px;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
+#deleteitem {
+    background-color: white;
+    color: gray;
+    font-weight: bold;
+    font-family: cursive;
+    height: 30px;
+}
+#deleteitem:hover {
+    background-color: palevioletred;
+}
+
+/* .form{
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    margin: 10px;
+    border-radius: 2px;
+    padding: 10px;
+    text-decoration: none;
+    size: 10px;
+} */
+
 .h1{
     /* background-color: white; */
     font-family: cursive;
